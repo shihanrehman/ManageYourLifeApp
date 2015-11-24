@@ -1,0 +1,46 @@
+<h3 class="text-center">{{pageName}} Page</h3>
+
+<br>
+
+<div class="row">
+
+<div class="col-md-4" class="text-center">
+	<h4 class="text-center">Create A New Todo</h4>
+	<hr>
+	<div class="form-group">
+		<input type="text" placeholder="Todo Name" ng-model="todos.name" class="form-control">
+		</div>
+		<div class="form-group">
+		<textarea class="form-control" type="text" placeholder="Description" ng-model="todos.description"></textarea>
+		</div>
+		<div class="form-group">
+		<input type="date" class="form-control" placeholder="Completion Date" ng-model="todos.dueDate" />
+		</div>
+		<button class="btn btn-primary btn-block" ng-click="addTodo()">Add A Todo</button>
+		<br>
+		<br>
+		<!--<button class="btn-info" ng-click="update(todos._id)">Update</button> -->
+	</div>
+
+	<div class="col-md-8">
+	<h4 class="text-center">Open Todos:</h4>
+	<hr>
+		<ol>
+			<li ng-repeat="todos in todolist" class="well">
+				<h4>Todo: {{todos.name}}</h4>
+				<h5><b>Description:</b> {{todos.description}}</h5>
+					<div class="row">
+					<div class="col-sm-10">
+						<p><b>Due Date:</b> {{todos.dueDate | date:'medium'}}</p>
+					</div>
+					<div class="col-sm-2">
+						<button class="btn btn-success" ng-click="remove(todos._id)"><span class="glyphicon glyphicon-thumbs-up"></span> Done</button>
+					</div>		
+					</div>
+					<!--<button class="btn-success" ng-click="edit(todos._id)">Edit</button> -->	
+			</li>
+		</ol>
+	</div>
+	
+</div>
+<br>

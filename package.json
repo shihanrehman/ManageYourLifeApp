@@ -1,0 +1,13 @@
+{
+	"name": "Managers",
+	"version": "0.0.1",
+	"scripts": {
+		"start": "server.js"
+	},
+	"dependencies": {
+		"express": "~4.8.1",
+		"body-parser": "~1.8.1",
+		"mongojs": "*"
+	}
+
+}
